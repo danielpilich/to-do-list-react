@@ -9,6 +9,7 @@
   },
   "author": "Daniel Pilich",
   "dependencies": {
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "postgres": "^3.3.5"
   }
 }
