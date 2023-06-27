@@ -1,6 +1,6 @@
 CREATE DATABASE todoapp;
 
-CREATE TABLE todos(
+CREATE TABLE tasks(
     id varchar(255) PRIMARY KEY,
     user_email VARCHAR(255),
     title VARCHAR(30),
