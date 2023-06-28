@@ -26,16 +26,7 @@ body{
     margin-top:50px;
 }
 
-/* List Header */
-
-.list-header{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    border-bottom: #FFFFFF1e 1px solid;
-}
-
-.button-container{
+.button-container, .info-container{
     display:flex;
     align-items:center;
 }
@@ -47,4 +38,105 @@ body{
     background-color: transparent;
     font-size: 10px;
     color:var(--white);
+}
+
+/* Buttons pattern */
+
+.button-edit{
+    border: 1.5px solid lightgreen;
+    color: lightgreen !important;
+    text-transform:uppercase;
+}
+
+.button-edit:hover{
+    border: 1.5px solid green;
+    color: green !important;
+    background-color: lightgreen;
+}
+
+.button-edit:active{
+    color: var(--white) !important;
+    background-color: green;
+}
+
+.button-delete{
+    border: 1.5px solid pink;
+    color: pink !important;
+    text-transform:uppercase;
+}
+
+.button-delete:hover{
+    border: 1.5px solid red;
+    color: red !important;
+    background-color: pink;
+}
+
+.button-delete:active{
+    color: var(--white) !important;
+    background-color: red;
+}
+
+.button-create{
+    border: 1.5px solid lightblue;
+    color: lightblue !important;
+    text-transform:uppercase;
+}
+
+.button-create:hover{
+    border: 1.5px solid blue;
+    color: blue !important;
+    background-color: lightblue;
+}
+
+.button-create:active{
+    color: var(--white) !important;
+    background-color: blue;
+}
+
+.button-signout{
+    border: 1.5px solid plum;
+    color: plum !important;
+    text-transform:uppercase;
+}
+
+.button-signout:hover{
+    border: 1.5px solid purple;
+    color: purple !important;
+    background-color: plum;
+}
+
+.button-signout:active{
+    color: var(--white) !important;
+    background-color: purple;
+}
+
+/* List Header */
+
+.list-header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    border-bottom: #FFFFFF1e 1px solid;
+}
+
+/* List Item */
+.list-item{
+    width:100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: #FFFFFF1f 0 0 0 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tick{
+    padding:10px;
+}
+
+.tick path, polyline{
+    fill:none;
+    stroke:#72CBE8;
+    stroke-width:2 ;
+    stroke-linecap:round;
+    stroke-linejoin:round;
 }
