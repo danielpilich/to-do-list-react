@@ -39,13 +39,28 @@ app.post('/tasks', async (req, res) => {
     });
 })
 
-//edit task
+//edit a task
 app.put('/tasks/:id', async (req, res) =>{
     const {id} = req.params
     const { user_email, title, progress, date } = req.body
 
     pool.query('UPDATE tasks SET user_email = ?, title = ?, progress = ?, date = ? WHERE id = ?;', 
     [user_email, title, progress, date, id], (err, data) => {
+        if(err) {
+            console.error(err);
+            return;
+        }
+        // rows fetch
+        res.json(data)
+    });
+})
+
+//delete a task
+app.delete('/tasks/:id', async (req, res) => {
+    const { id } = req.params
+
+    pool.query('DELETE FROM tasks WHERE id = ?', 
+    [id], (err, data) => {
         if(err) {
             console.error(err);
             return;
