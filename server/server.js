@@ -102,12 +102,12 @@ app.post('/login', (req, res) => {
         }
         if(data == null) return res.json({ detail: 'User does not exist!'})
 
-        const success = await bcrypt.compare(password, data[0].hashed_password)
         const token = jwt.sign({email}, 'secret', {expiresIn:'1hr'})
 
-        if(success){
+        try{
+            const success = await bcrypt.compare(password, data[0].hashed_password)
             res.json({'email': data[0].email, token})
-        }else{
+        }catch{
             res.json({detail:"Login failed"})
         }    
 })
