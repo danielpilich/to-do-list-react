@@ -1,25 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 :root {
-    --black: #0E0E0E;
+    --black: #0e0e0e;
     --grey: #333333;
     --white: #E5E5E5;
     --blue: #72CBE8;
+
+    --main: #0fbcf9;
+    --add: #1e272e;
+    --back: #485460;
+    --text: #d2dae2;
 }
+
 
 body{
     margin:0;
     padding:0;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--back);
+    color: var(--text);
     display:flex;
     justify-content: center;
     font-family: 'Lato', sans-serif;
 }
 
 .app{
-    background-color: #333333;
-    box-shadow: #E5E5E50e 0 6px 24px, #E5E5E50e 0 0 0 1px;
+    background-color: var(--add);
+    box-shadow: #808e9b 0 6px 24px, #808e9b 0 0 1px;
     border-radius: 10px;
     padding:10px;
     width: 800px;
@@ -37,84 +43,84 @@ body{
     border-radius: 12px;
     background-color: transparent;
     font-size: 10px;
-    color:var(--white);
+    color:var(--text);
 }
 
 input{
     margin:11px 0;
     padding:12px 16px;
     border-radius:12px;
-    border: 1.5px solid #C3C3C3;
+    border: 1.5px solid var(--add);
 }
 
 /* Buttons pattern */
 
 .button-edit{
-    border: 1.5px solid lightgreen;
-    color: lightgreen !important;
+    border: 1.5px solid #0be881;
+    color: #0be881 !important;
     text-transform:uppercase;
 }
 
 .button-edit:hover{
-    border: 1.5px solid green;
-    color: green !important;
-    background-color: lightgreen;
+    border: 1.5px solid #1e272e;
+    color: #1e272e !important;
+    background-color: #0be881;
 }
 
 .button-edit:active{
-    color: var(--white) !important;
-    background-color: green;
+    color: #1e272e !important;
+    background-color: #05c46b;
 }
 
 .button-delete{
-    border: 1.5px solid pink;
-    color: pink !important;
+    border: 1.5px solid #ff5e57;
+    color: #ff5e57 !important;
     text-transform:uppercase;
 }
 
 .button-delete:hover{
-    border: 1.5px solid red;
-    color: red !important;
-    background-color: pink;
+    border: 1.5px solid #1e272e;
+    color: #1e272e !important;
+    background-color: #ff5e57;
 }
 
 .button-delete:active{
-    color: var(--white) !important;
-    background-color: red;
+    color: #1e272e !important;
+    background-color: #ff3f34;
 }
 
 .button-create{
-    border: 1.5px solid lightblue;
-    color: lightblue !important;
+    border: 1.5px solid #34e7e4;
+    color: #34e7e4 !important;
     text-transform:uppercase;
 }
 
 .button-create:hover{
-    border: 1.5px solid blue;
-    color: blue !important;
-    background-color: lightblue;
+    border: 1.5px solid #1e272e;
+    color: #1e272e !important;
+    background-color: #34e7e4;
 }
 
 .button-create:active{
-    color: var(--white) !important;
-    background-color: blue;
+    color: #1e272e !important;
+    background-color: #00d8d6;
 }
 
 .button-signout{
-    border: 1.5px solid plum;
-    color: plum !important;
+    border: 1.5px solid #ffc048;
+    color: #ffc048 !important;
     text-transform:uppercase;
 }
 
 .button-signout:hover{
-    border: 1.5px solid purple;
-    color: purple !important;
-    background-color: plum;
+    border: 1.5px solid #1e272e;
+    color: #1e272e !important;
+    background-color: #ffc048;
 }
 
 .button-signout:active{
-    color: var(--white) !important;
-    background-color: purple;
+    color: #1e272e !important;
+    background-color: #ffa801;
 }
 
 /* List Header */
@@ -123,7 +129,7 @@ input{
     width:100%;
     display:flex;
     justify-content:space-between;
-    border-bottom: #FFFFFF1e 1px solid;
+    border-bottom: var(--back) 1px solid;
 }
 
 /* List Item */
@@ -131,7 +137,7 @@ input{
     width:100%;
     margin: 10px 0;
     border-radius: 10px;
-    box-shadow: #FFFFFF1f 0 0 0 1px;
+    box-shadow: var(--back) 0 0 0 1px;
     display: flex;
     justify-content: space-between;
 }
@@ -142,7 +148,7 @@ input{
 
 .tick path, polyline{
     fill:none;
-    stroke:#72CBE8;
+    stroke:var(--main);
     stroke-width:2 ;
     stroke-linecap:round;
     stroke-linejoin:round;
@@ -155,7 +161,7 @@ input{
     top:0;
     width:100vw;
     height:100vh;
-    background-color: #FFFFFF10;
+    background-color: var(--back);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -163,11 +169,11 @@ input{
 
 .modal{
     width:500px;
-    background-color: var(--white);
-    color: var(--black);
+    background-color: var(--add);
+    color: var(--text);
     padding:40px;
     border-radius: 10px;
-    box-shadow: #FFFFFF1e 0 6px 24px 0, #FFFFFF1f 0 0 0 1px;
+    box-shadow: #808e9b 0 6px 24px 0, #808e9b 0 0 0 1px;
 }
 
 .modal .form-title-container{
@@ -205,7 +211,6 @@ input{
     width: 500px;
     border-radius: 10px;
     overflow:hidden;
-    box-shadow: #FFFFFF1e 0 6px 24px, #FFFFFF1f 0 0 0 1px;
 }
 
 .auth-container-box form{
@@ -228,20 +233,20 @@ input{
 .copyright{
     font-size: 13px;
     margin: 10px;
-    color: #727290;
+    color: #808e9b;
 }
 
 .user-email{
     float:right;
     font-size: 13px;
     margin: 10px;
-    color: #727290;
+    color: #808e9b;
 }
 
 .outer-bar{
     width:200px;
     height:14px;
-    background-color: #d8d8d8;
+    background-color: #485460;
     border-radius:7px;
     overflow:hidden;
 }
